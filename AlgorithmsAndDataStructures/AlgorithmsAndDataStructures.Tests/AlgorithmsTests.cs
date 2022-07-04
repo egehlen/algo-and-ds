@@ -1,4 +1,5 @@
-using AlgorithmsAndDataStructures.Algorithms;
+using AlgorithmsAndDataStructures.Algorithms.Search;
+using AlgorithmsAndDataStructures.Algorithms.Sorting;
 
 namespace AlgorithmsAndDataStructures.Tests
 {
@@ -66,5 +67,74 @@ namespace AlgorithmsAndDataStructures.Tests
         }
 
         #endregion
+
+        #region [ Bubble Sort ]
+
+        [Test]
+        public void BubbleSort_Int_Values()
+        {
+            var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            var algoSort = _01_BubbleSort.Execute(listOfIntegers);
+
+            Assert.IsNotNull(algoSort);
+            Assert.AreEqual(localSort.Length, algoSort.Length);
+            Assert.AreEqual(localSort, algoSort);
+        }
+
+        [Test]
+        public void BubbleSort_String_Values()
+        {
+            var localSort = listOfStrings.OrderBy(x => x).ToArray();
+            var algoSort = _01_BubbleSort.Execute(listOfStrings);
+
+            Assert.IsNotNull(algoSort);
+            Assert.AreEqual(localSort.Length, algoSort.Length);
+            Assert.AreEqual(localSort, algoSort);
+        }
+
+        #endregion
+
+        #region [ Selection Sort ]
+
+        [Test]
+        public void SelectionSort_Int_Values()
+        {
+            var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            var algoSort = _02_SelectionSort.Execute(listOfIntegers);
+
+            Assert.IsNotNull(algoSort);
+            Assert.AreEqual(localSort.Length, algoSort.Length);
+            Assert.AreEqual(localSort, algoSort);
+        }
+
+        [Test]
+        public void SelectionSort_String_Values()
+        {
+            var localSort = listOfStrings.OrderBy(x => x).ToArray();
+            var algoSort = _02_SelectionSort.Execute(listOfStrings);
+
+            Assert.IsNotNull(algoSort);
+            Assert.AreEqual(localSort.Length, algoSort.Length);
+            Assert.AreEqual(localSort, algoSort);
+        }
+
+        #endregion
+
+        #region [ Insertion Sort ]
+
+        [Test]
+        public void InsertionSort_Int_Values()
+        {
+            var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            var algoSort = _03_InsertionSort.Execute(listOfIntegers);
+
+            Assert.IsNotNull(algoSort);
+            Assert.AreEqual(localSort.Length, algoSort.Length);
+            Assert.AreEqual(localSort, algoSort);
+        }
+
+        #endregion
+
+
     }
 }

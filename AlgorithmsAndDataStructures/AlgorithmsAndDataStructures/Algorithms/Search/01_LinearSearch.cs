@@ -1,13 +1,16 @@
-﻿namespace AlgorithmsAndDataStructures.Algorithms
+﻿namespace AlgorithmsAndDataStructures.Algorithms.Search
 {
     /*
         Linear search
         -------------
 
-        It works basically by checking each element of the collection in order 
+        Linear search works by checking each element of the collection in order 
         to find the matching element. It matches the value by direct comparison.
         It is best suitable to unordered collections, and generics can be used
         as seen in the implementation below.
+
+        Best suitable for:
+            - Unordered collections;
 
         Time complexity:
             - Best: O(1) => when the value matches occurs in the first element
