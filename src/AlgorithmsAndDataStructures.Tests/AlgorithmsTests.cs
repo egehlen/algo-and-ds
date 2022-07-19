@@ -24,7 +24,10 @@ namespace AlgorithmsAndDataStructures.Tests
         [TestCase(-123, false)]
         public void LinearSearchByIndex_Int_Values(int query, bool found)
         {
+            // Arrange -> test cases
+            // Act
             var index = _01_LinearSearch.Execute(listOfIntegers.ToArray(), query);
+            // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
 
@@ -35,7 +38,10 @@ namespace AlgorithmsAndDataStructures.Tests
         [TestCase(null, false)]
         public void LinearSearchByIndex_String_Values(string query, bool found)
         {
+            // Arrange -> test cases
+            // Act
             var index = _01_LinearSearch.Execute(listOfStrings.ToArray(), query);
+            // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
 
@@ -50,8 +56,11 @@ namespace AlgorithmsAndDataStructures.Tests
         [TestCase(-123, false)]
         public void BinarySearch_Int_Values(int query, bool found)
         {
+            // Arrange
             var sortedList = listOfIntegers.OrderBy(x => x).ToArray();
+            // Act
             var index = _02_BinarySearch.Execute(sortedList, query);
+            // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
 
@@ -61,8 +70,11 @@ namespace AlgorithmsAndDataStructures.Tests
         [TestCase("bzzzzzzzzz", false)]
         public void BinarySearch_String_Values(string query, bool found)
         {
+            // Arrange
             var sortedList = listOfStrings.OrderBy(x => x).ToArray();
+            // Act
             var index = _02_BinarySearch.Execute(sortedList, query);
+            // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
 
@@ -73,9 +85,11 @@ namespace AlgorithmsAndDataStructures.Tests
         [Test]
         public void BubbleSort_Int_Values()
         {
+            // Arrange
             var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            // Act
             var algoSort = _01_BubbleSort.Execute(listOfIntegers);
-
+            // Assert
             Assert.IsNotNull(algoSort);
             Assert.AreEqual(localSort.Length, algoSort.Length);
             Assert.AreEqual(localSort, algoSort);
@@ -84,9 +98,11 @@ namespace AlgorithmsAndDataStructures.Tests
         [Test]
         public void BubbleSort_String_Values()
         {
+            // Arrange
             var localSort = listOfStrings.OrderBy(x => x).ToArray();
+            // Act
             var algoSort = _01_BubbleSort.Execute(listOfStrings);
-
+            // Assert
             Assert.IsNotNull(algoSort);
             Assert.AreEqual(localSort.Length, algoSort.Length);
             Assert.AreEqual(localSort, algoSort);
@@ -99,9 +115,11 @@ namespace AlgorithmsAndDataStructures.Tests
         [Test]
         public void SelectionSort_Int_Values()
         {
+            // Arrange
             var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            // Act
             var algoSort = _02_SelectionSort.Execute(listOfIntegers);
-
+            // Assert
             Assert.IsNotNull(algoSort);
             Assert.AreEqual(localSort.Length, algoSort.Length);
             Assert.AreEqual(localSort, algoSort);
@@ -110,9 +128,11 @@ namespace AlgorithmsAndDataStructures.Tests
         [Test]
         public void SelectionSort_String_Values()
         {
+            // Arrange
             var localSort = listOfStrings.OrderBy(x => x).ToArray();
+            // Act
             var algoSort = _02_SelectionSort.Execute(listOfStrings);
-
+            // Assert
             Assert.IsNotNull(algoSort);
             Assert.AreEqual(localSort.Length, algoSort.Length);
             Assert.AreEqual(localSort, algoSort);
@@ -125,9 +145,11 @@ namespace AlgorithmsAndDataStructures.Tests
         [Test]
         public void InsertionSort_Int_Values()
         {
+            // Arrange
             var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            // Act
             var algoSort = _03_InsertionSort.Execute(listOfIntegers);
-
+            // Assert
             Assert.IsNotNull(algoSort);
             Assert.AreEqual(localSort.Length, algoSort.Length);
             Assert.AreEqual(localSort, algoSort);

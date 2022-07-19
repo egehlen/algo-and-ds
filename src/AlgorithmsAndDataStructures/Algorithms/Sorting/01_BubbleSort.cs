@@ -1,8 +1,16 @@
 ﻿namespace AlgorithmsAndDataStructures.Algorithms.Sorting
 {
     /*
-    
-        Works by comparing two elements and swapping the bigger of the two until it reaches the end of the collection
+        Bubble sort
+        -----------
+
+        It Works by comparing two elements on each iteration and swapping them if 
+        out of order, until it reaches the end of the collection. For example, in 
+        an array of integers, each loop pass will check the current element against 
+        the next element. If the first element is a higer number, it will swap with 
+        the second one, repeating the process until it reaches the end of the 
+        collection and starting again from the current + 1 element, therefore pushing 
+        the bigger number to the end of the collection.
 
         Time complexity:
             - Best: O(n)
