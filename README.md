@@ -5,15 +5,15 @@ This repository covers the implementation (from scratch) of the following Data S
 ### Algorithms:
 - Recursion;
 - Search:
-    - Linear;
-    - Binary;
+    - [Linear](https://github.com/egehlen/algorithms-and-datastructures-csharp/blob/main/src/AlgorithmsAndDataStructures/Algorithms/Search/01_LinearSearch.cs);
+    - [Binary](https://github.com/egehlen/algorithms-and-datastructures-csharp/blob/main/src/AlgorithmsAndDataStructures/Algorithms/Search/02_BinarySearch.cs);
 - Sort:
-    - Bubble;
-    - Selection;
-    - Insertion;
-    - Merge;
-    - Quick;
-    - Radix;
+    - [Bubble](https://github.com/egehlen/algorithms-and-datastructures-csharp/blob/main/src/AlgorithmsAndDataStructures/Algorithms/Sorting/01_BubbleSort.cs);
+    - [Selection](https://github.com/egehlen/algorithms-and-datastructures-csharp/blob/main/src/AlgorithmsAndDataStructures/Algorithms/Sorting/02_SelectionSort.cs);
+    - [Insertion](https://github.com/egehlen/algorithms-and-datastructures-csharp/blob/main/src/AlgorithmsAndDataStructures/Algorithms/Sorting/03_InsertionSort.cs);
+    - [Merge](https://github.com/egehlen/algorithms-and-datastructures-csharp/blob/main/src/AlgorithmsAndDataStructures/Algorithms/Sorting/04_MergeSort.cs);
+    - [Quick]();
+    - [Radix]();
 
 ### Data Structures:
 - Linked lists (singly/doubly);
@@ -21,7 +21,7 @@ This repository covers the implementation (from scratch) of the following Data S
 - Queues;
 - Trees:
     - Generic Trees;
-    - Binary Tree;
+    - [Binary Tree](https://github.com/egehlen/algorithms-and-datastructures-csharp/blob/main/src/AlgorithmsAndDataStructures/DataStructures/BinaryTree/BinaryTree.cs);
     - Binary Search Trees;
     - Tree Traversal:
         - Breadth First;
