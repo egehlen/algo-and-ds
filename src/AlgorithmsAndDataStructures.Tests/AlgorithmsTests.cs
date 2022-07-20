@@ -5,16 +5,6 @@ namespace AlgorithmsAndDataStructures.Tests
 {
     public class AlgorithmsTests
     {
-        private int[] listOfIntegers = { };
-        private string[] listOfStrings = { };
-
-        [OneTimeSetUp]
-        public void Init()
-        {
-            listOfIntegers = new int[] { 799, 19, 777, 35, 2, 58, 945, 556, 47, 887 };
-            listOfStrings = new string[] { "Yasmine", "Ashley", "Jared", "Deron", "Jasen", "Orpha", "Shad", "SPECIAL_NAME", "General", "Alex"  };
-        }
-
         #region [ Linear search ]
 
         [Test]
@@ -26,7 +16,8 @@ namespace AlgorithmsAndDataStructures.Tests
         {
             // Arrange -> test cases
             // Act
-            var index = _01_LinearSearch.Execute(listOfIntegers.ToArray(), query);
+            var index = _01_LinearSearch.Execute(Mocks.Ints, query);
+
             // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
@@ -40,7 +31,8 @@ namespace AlgorithmsAndDataStructures.Tests
         {
             // Arrange -> test cases
             // Act
-            var index = _01_LinearSearch.Execute(listOfStrings.ToArray(), query);
+            var index = _01_LinearSearch.Execute(Mocks.Strings, query);
+
             // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
@@ -57,9 +49,11 @@ namespace AlgorithmsAndDataStructures.Tests
         public void BinarySearch_Int_Values(int query, bool found)
         {
             // Arrange
-            var sortedList = listOfIntegers.OrderBy(x => x).ToArray();
+            var sortedList = Mocks.Ints.OrderBy(x => x).ToArray();
+
             // Act
             var index = _02_BinarySearch.Execute(sortedList, query);
+
             // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
@@ -71,9 +65,11 @@ namespace AlgorithmsAndDataStructures.Tests
         public void BinarySearch_String_Values(string query, bool found)
         {
             // Arrange
-            var sortedList = listOfStrings.OrderBy(x => x).ToArray();
+            var sortedList = Mocks.Strings.OrderBy(x => x).ToArray();
+
             // Act
             var index = _02_BinarySearch.Execute(sortedList, query);
+
             // Assert
             Assert.IsTrue(found ? index > -1 : index == -1);
         }
@@ -86,26 +82,30 @@ namespace AlgorithmsAndDataStructures.Tests
         public void BubbleSort_Int_Values()
         {
             // Arrange
-            var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            var localSort = Mocks.Ints.OrderBy(x => x).ToArray();
+
             // Act
-            var algoSort = _01_BubbleSort.Execute(listOfIntegers);
+            var algoSort = _01_BubbleSort.Execute(Mocks.Ints);
+
             // Assert
             Assert.IsNotNull(algoSort);
-            Assert.AreEqual(localSort.Length, algoSort.Length);
-            Assert.AreEqual(localSort, algoSort);
+            Assert.That(algoSort.Length, Is.EqualTo(localSort.Length));
+            Assert.That(algoSort, Is.EqualTo(localSort));
         }
 
         [Test]
         public void BubbleSort_String_Values()
         {
             // Arrange
-            var localSort = listOfStrings.OrderBy(x => x).ToArray();
+            var localSort = Mocks.Strings.OrderBy(x => x).ToArray();
+
             // Act
-            var algoSort = _01_BubbleSort.Execute(listOfStrings);
+            var algoSort = _01_BubbleSort.Execute(Mocks.Strings);
+
             // Assert
             Assert.IsNotNull(algoSort);
-            Assert.AreEqual(localSort.Length, algoSort.Length);
-            Assert.AreEqual(localSort, algoSort);
+            Assert.That(algoSort.Length, Is.EqualTo(localSort.Length));
+            Assert.That(algoSort, Is.EqualTo(localSort));
         }
 
         #endregion
@@ -116,26 +116,30 @@ namespace AlgorithmsAndDataStructures.Tests
         public void SelectionSort_Int_Values()
         {
             // Arrange
-            var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            var localSort = Mocks.Ints.OrderBy(x => x).ToArray();
+
             // Act
-            var algoSort = _02_SelectionSort.Execute(listOfIntegers);
+            var algoSort = _02_SelectionSort.Execute(Mocks.Ints);
+
             // Assert
             Assert.IsNotNull(algoSort);
-            Assert.AreEqual(localSort.Length, algoSort.Length);
-            Assert.AreEqual(localSort, algoSort);
+            Assert.That(algoSort.Length, Is.EqualTo(localSort.Length));
+            Assert.That(algoSort, Is.EqualTo(localSort));
         }
 
         [Test]
         public void SelectionSort_String_Values()
         {
             // Arrange
-            var localSort = listOfStrings.OrderBy(x => x).ToArray();
+            var localSort = Mocks.Strings.OrderBy(x => x).ToArray();
+
             // Act
-            var algoSort = _02_SelectionSort.Execute(listOfStrings);
+            var algoSort = _02_SelectionSort.Execute(Mocks.Strings);
+
             // Assert
             Assert.IsNotNull(algoSort);
-            Assert.AreEqual(localSort.Length, algoSort.Length);
-            Assert.AreEqual(localSort, algoSort);
+            Assert.That(algoSort.Length, Is.EqualTo(localSort.Length));
+            Assert.That(algoSort, Is.EqualTo(localSort));
         }
 
         #endregion
@@ -146,17 +150,18 @@ namespace AlgorithmsAndDataStructures.Tests
         public void InsertionSort_Int_Values()
         {
             // Arrange
-            var localSort = listOfIntegers.OrderBy(x => x).ToArray();
+            var localSort = Mocks.Ints.OrderBy(x => x).ToArray();
+
             // Act
-            var algoSort = _03_InsertionSort.Execute(listOfIntegers);
+            var algoSort = _03_InsertionSort.Execute(Mocks.Ints);
+
             // Assert
             Assert.IsNotNull(algoSort);
-            Assert.AreEqual(localSort.Length, algoSort.Length);
-            Assert.AreEqual(localSort, algoSort);
+            Assert.That(algoSort.Length, Is.EqualTo(localSort.Length));
+            Assert.That(algoSort, Is.EqualTo(localSort));
         }
 
         #endregion
-
 
     }
 }
