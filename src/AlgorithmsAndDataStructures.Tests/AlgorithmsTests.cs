@@ -163,5 +163,24 @@ namespace AlgorithmsAndDataStructures.Tests
 
         #endregion
 
+        #region [ Merge Sort ]
+
+        [Test]
+        public void MergeSort_Int_Values()
+        {
+            // Arrange
+            var localSort = Mocks.Ints.OrderBy(x => x).ToArray();
+
+            // Act
+            var algoSort = _04_MergeSort.Execute(Mocks.Ints);
+
+            // Assert
+            Assert.IsNotNull(algoSort);
+            Assert.That(algoSort.Length, Is.EqualTo(localSort.Length));
+            Assert.That(algoSort, Is.EqualTo(localSort));
+        }
+
+        #endregion
+
     }
 }

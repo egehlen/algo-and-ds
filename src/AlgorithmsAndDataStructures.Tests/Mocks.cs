@@ -4,6 +4,9 @@ namespace AlgorithmsAndDataStructures.Tests
 {
     public class Mocks
     {
+        public static int[] Ints = new int[] { 799, 19, 777, 35, 2, 58, 945, 556, 47, 887 };
+        public static string[] Strings = new string[] { "Yasmine", "Ashley", "Jared", "Deron", "Jasen", "Orpha", "Shad", "SPECIAL_NAME", "General", "Alex" };
+
         /*
         
         Simple binary tree:

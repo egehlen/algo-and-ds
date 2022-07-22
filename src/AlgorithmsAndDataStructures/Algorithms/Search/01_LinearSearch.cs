@@ -2,23 +2,15 @@
 {
     /*
         Linear search
-        -------------
+        =============
 
-        Linear search works by checking each element of the collection in order 
-        to find the matching element. It matches the value by direct comparison.
-        It is best suitable to unordered collections, and generics can be used
-        as seen in the implementation below.
+        Linear search works by checking each element of the collection in order to find
+        the matching element. It matches the value by direct comparison. It is best
+        suitable to unordered collections, and generics can be used as seen in the
+        implementation below.
 
-        Best suitable for:
-            - Unordered collections;
-
-        Time complexity:
-            - Best: O(1) => when the value matches occurs in the first element
-            - Worst/avg: O(n) => varies according the length of the input
-
-        Space complexity:
-            - Best/worst/avg: O(1) => no allocations done for the algorithm
-
+        Time complexity (worst): O(n)
+        Space complexity: O(1)
     */
 
     public class _01_LinearSearch
