@@ -1,6 +1,6 @@
 # Algorithms and Data Structures in C# .NET
 
-This repository covers the implementation (from scratch) of the following Data Structures and Algorithms:
+This is a self-guided study repository that covers the implementation (from scratch) of the following Data Structures and Algorithms:
 
 ### Algorithms:
 - Recursion;
